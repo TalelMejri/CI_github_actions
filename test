@@ -1,0 +1,1 @@
+#flake8 . to test quality of code , pytest -v to check the coverage of the code
