@@ -2,9 +2,11 @@ from app import add, subtract
 
 from app import multiply
 
+
 def test_multiply():
     assert multiply(3, 4) == 12
-    
+
+
 def test_add():
     assert add(2, 3) == 5
     assert add(-1, 1) == 0
