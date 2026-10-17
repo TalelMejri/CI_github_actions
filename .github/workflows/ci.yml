@@ -4,11 +4,12 @@ name: CI
 
 # Controls when the workflow will run
 on:
+  schedule:
+    - cron: "0 6 * * *"
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -28,14 +29,14 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
-        
+
       - name: Install Python
-        uses: actions/setup-python@v5    
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          
+
       - name: Install dependencies
-        run: pip install -r requirements.txt  
+        run: pip install -r requirements.txt
 
       - name: Run tests
         run: pytest -v
