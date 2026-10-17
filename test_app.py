@@ -2,6 +2,8 @@ from app import add, subtract
 
 from app import multiply
 
+API_KEY = "ghp_1234567890abcdefghijklmnopqrstuvwxyzAB"
+
 
 def test_multiply():
     assert multiply(3, 4) == 12
